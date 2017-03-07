@@ -8,24 +8,29 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
+    // TextViews
+    TextView signup_link;
+    // Buttons
+    Button login_btn ;
+    // EditText
+    EditText email_input;
+    EditText pass_input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //mapping with ids
+        login_btn = (Button) findViewById(R.id.btn_login);
+        email_input = (EditText) findViewById(R.id.input_email);
+        login_btn = (Button) findViewById(R.id.btn_login);
+
     }
 
     @Override
